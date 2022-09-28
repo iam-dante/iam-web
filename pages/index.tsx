@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
   function ThemeSwitch() {
     return (
@@ -71,10 +69,10 @@ const Home = () => {
 
         <div className="hidden h-[90%]  md:block">
           <div className="h-full grid grid-cols-2 ">
-            <div className="h-full flex flex-col justify-center items-center pl-80">
+            <div className="h-full flex flex-col justify-center items-center pl-7 md:pl-40 xl:pl-80">
               <div className="space-y-4">
                 <h1 className="font-semibold text-6xl text-sky-700 dark:text-sky-500">
-                  Hi, I'm Brian Gasper.
+                  Hi, I`m Brian Gasper.
                 </h1>
                 <p className="text-4xl dark:text-white">
                   A front-end developer and a UI/UX designer based in Dar es
@@ -168,7 +166,7 @@ const Home = () => {
 
         <div className="md:hidden flex justify-center items-center h-[90%] w-full ">
           <div className="w-98 h-auto  flex justify-center flex-col items-center w-full space-y-6 px-12">
-            <img src="/images/richard.jpg" className="rounded-full h-40 w-40" />
+            <img src="/images/richard.jpg" className="rounded-full h-40 w-40" alt="" />
             <h1 className=" text-4xl text-center dark:text-white font-jet">
               Brian Gasper
             </h1>
