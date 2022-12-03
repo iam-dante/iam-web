@@ -55,7 +55,7 @@ const Home = (): JSX.Element => {
   }
 
   return (
-    <body className={`${enabled ? "" : "dark"}  h-screen `}>
+    <div className={`${enabled ? "" : "dark"}  h-screen `}>
       <Head>
         <title>Hellow, Brian Here 👋 </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -255,7 +255,7 @@ const Home = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
