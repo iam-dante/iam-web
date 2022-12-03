@@ -7,6 +7,7 @@ const Home = (): JSX.Element => {
   function ThemeSwitch() {
     return (
       <Switch
+        aria-label="dark mode"
         checked={enabled}
         onChange={setEnabled}
         className={`${
