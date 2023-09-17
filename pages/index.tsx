@@ -75,7 +75,7 @@ const Home = (): JSX.Element => {
                 <h1 className="font-semibold text-6xl text-sky-700 dark:text-sky-500">
                   Hi, I`m Brian Temu.
                 </h1>
-                <p className="text-4xl dark:text-white">
+                <p className="text-2xl dark:text-white">
                   Data Scientist with a software development backgroud located at Maryland Baltimore County.
                 </p>
                 <div className="flex flex-row space-x-6">
