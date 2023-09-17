@@ -73,11 +73,10 @@ const Home = (): JSX.Element => {
             <div className="h-full flex flex-col justify-center items-center pl-7 md:pl-40 xl:pl-80">
               <div className="space-y-4">
                 <h1 className="font-semibold text-6xl text-sky-700 dark:text-sky-500">
-                  Hi, I`m Brian Gasper.
+                  Hi, I`m Brian Temu.
                 </h1>
                 <p className="text-4xl dark:text-white">
-                  A front-end developer and a UI/UX designer based in Dar es
-                  salaam, Tanzania
+                  Data Scientist with a software development backgroud located at Maryland Baltimore County.
                 </p>
                 <div className="flex flex-row space-x-6">
                   <a
