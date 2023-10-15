@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
+import Link from "next/link";
 
 const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
@@ -80,9 +81,12 @@ const Home = (): JSX.Element => {
                  * 
                  * 
                 <p className="text-2xl dark:text-white">
-Data Scientist with a software development backgroud located at Maryland Baltimore County.
+                    Data Scientist with a software development backgroud located at Maryland Baltimore County.
                 </p>
+
                  */}
+
+
                 <div className="flex flex-row space-x-6">
                   <a
                     href="https://github.com/iam-dante"
@@ -151,15 +155,18 @@ Data Scientist with a software development backgroud located at Maryland Baltimo
                       />
                     </svg>
                   </a>
-                  <svg
-                    className="h-6 w-6 text-gray-500 hover:text-green-500"
-                    viewBox="0 0 16 16"
-                    fill="currentcolor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10.5858 2.58579C11.3668 1.80474 12.6331 1.80474 13.4142 2.58579C14.1952 3.36684 14.1952 4.63316 13.4142 5.41421L10.4142 8.41421C9.63315 9.19526 8.36682 9.19526 7.58577 8.41421C7.19524 8.02369 6.56208 8.02369 6.17156 8.41421C5.78103 8.80474 5.78103 9.4379 6.17156 9.82843C7.73365 11.3905 10.2663 11.3905 11.8284 9.82843L14.8284 6.82843C16.3905 5.26633 16.3905 2.73367 14.8284 1.17157C13.2663 -0.390524 10.7337 -0.390524 9.17156 1.17157L7.67156 2.67157C7.28103 3.0621 7.28103 3.69526 7.67156 4.08579C8.06208 4.47631 8.69524 4.47631 9.08577 4.08579L10.5858 2.58579Z" />
-                    <path d="M5.58579 7.58579C6.36683 6.80474 7.63316 6.80474 8.41421 7.58579C8.80474 7.97631 9.4379 7.97631 9.82843 7.58579C10.219 7.19526 10.219 6.5621 9.82843 6.17157C8.26633 4.60948 5.73367 4.60948 4.17157 6.17157L1.17157 9.17157C-0.390524 10.7337 -0.390524 13.2663 1.17157 14.8284C2.73367 16.3905 5.26633 16.3905 6.82843 14.8284L8.32843 13.3284C8.71895 12.9379 8.71895 12.3047 8.32843 11.9142C7.9379 11.5237 7.30474 11.5237 6.91421 11.9142L5.41421 13.4142C4.63316 14.1953 3.36684 14.1953 2.58579 13.4142C1.80474 12.6332 1.80474 11.3668 2.58579 10.5858L5.58579 7.58579Z" />
-                  </svg>
+
+                  <Link href="/projects" className="cursor-pointer">
+                    <svg
+                      className="h-6 w-6 text-gray-500 hover:text-green-500 cursor-pointer"
+                      viewBox="0 0 16 16"
+                      fill="currentcolor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10.5858 2.58579C11.3668 1.80474 12.6331 1.80474 13.4142 2.58579C14.1952 3.36684 14.1952 4.63316 13.4142 5.41421L10.4142 8.41421C9.63315 9.19526 8.36682 9.19526 7.58577 8.41421C7.19524 8.02369 6.56208 8.02369 6.17156 8.41421C5.78103 8.80474 5.78103 9.4379 6.17156 9.82843C7.73365 11.3905 10.2663 11.3905 11.8284 9.82843L14.8284 6.82843C16.3905 5.26633 16.3905 2.73367 14.8284 1.17157C13.2663 -0.390524 10.7337 -0.390524 9.17156 1.17157L7.67156 2.67157C7.28103 3.0621 7.28103 3.69526 7.67156 4.08579C8.06208 4.47631 8.69524 4.47631 9.08577 4.08579L10.5858 2.58579Z" />
+                      <path d="M5.58579 7.58579C6.36683 6.80474 7.63316 6.80474 8.41421 7.58579C8.80474 7.97631 9.4379 7.97631 9.82843 7.58579C10.219 7.19526 10.219 6.5621 9.82843 6.17157C8.26633 4.60948 5.73367 4.60948 4.17157 6.17157L1.17157 9.17157C-0.390524 10.7337 -0.390524 13.2663 1.17157 14.8284C2.73367 16.3905 5.26633 16.3905 6.82843 14.8284L8.32843 13.3284C8.71895 12.9379 8.71895 12.3047 8.32843 11.9142C7.9379 11.5237 7.30474 11.5237 6.91421 11.9142L5.41421 13.4142C4.63316 14.1953 3.36684 14.1953 2.58579 13.4142C1.80474 12.6332 1.80474 11.3668 2.58579 10.5858L5.58579 7.58579Z" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -171,7 +178,11 @@ Data Scientist with a software development backgroud located at Maryland Baltimo
 
         <div className="md:hidden flex justify-center items-center h-[90%] w-full ">
           <div className="w-98 h-auto  flex justify-center flex-col items-center w-full space-y-6 px-12">
-            <img src="/images/richard.jpg" className="rounded-full h-40 w-40" alt="" />
+            <img
+              src="/images/richard.jpg"
+              className="rounded-full h-40 w-40"
+              alt=""
+            />
             <h1 className=" text-4xl text-center dark:text-white font-jet">
               Brian Gasper
             </h1>
