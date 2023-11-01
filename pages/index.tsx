@@ -60,129 +60,142 @@ const Home = (): JSX.Element => {
   }
 
   return (
-    <div className={`${enabled ? "" : "dark h-auto"} `}>
-      <Head>
-        <title>Hellow, Brian Here 👋 </title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+    <div className={`${enabled ? "" : "dark"} `}>
+      <div className="dark:bg-black h-auto">
+        <Head>
+          <title>Hellow, Brian Here 👋 </title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
 
-      <div className="h-screen bg-white dark:bg-black">
-        <div className="h-[10%] flex items-center   px-4 md:px-16 justify-end drop-shadow-sm">
-          <ThemeSwitch />
-        </div>
-
-        {/* main */}
-
-        <div className="min-h-full px-24">
-          <div className="py-6 flex justify-center">
-            <div>
-              <div className="flex flex-col items-center">
-                <h1 className="font-semibold text-7xl uppercase dark:text-white">
-                  Brian Temu
-                </h1>
-                <h1 className="dark:text-white">
-                  Data Science Major & Software Engineer
-                </h1>
-              </div>
-              <div className="h-12 flex space-x-8 items-center px-12 justify-center dark:text-white">
-                <GithubICon />
-                <LinkedInIcon />
-                <TwitterIcon />
-              </div>
-            </div>
+        <div className="h-screen bg-white dark:bg-black">
+          <div className="h-[10%] flex items-center   px-4 md:px-16 justify-end drop-shadow-sm">
+            <ThemeSwitch />
           </div>
 
-          <div className="mt-6">
-            <Tab.Group>
-              <Tab.List className="space-x-8 items-center justify-center flex">
-                <Tab as={Fragment}>
-                  {({ selected }) => (
-                    <button
-                      className={
-                        selected
-                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                          : " border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
-                      }
-                    >
-                      Projects
-                    </button>
-                  )}
-                </Tab>
-                <Tab as={Fragment}>
-                  {({ selected }) => (
-                    <button
-                      className={
-                        selected
-                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                          : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
-                      }
-                    >
-                      About Me
-                    </button>
-                  )}
-                </Tab>
-                <Tab as={Fragment}>
-                  {({ selected }) => (
-                    <button
-                      className={
-                        selected
-                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                          : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
-                      }
-                    >
-                      Resume
-                    </button>
-                  )}
-                </Tab>
-              </Tab.List>
-              <Tab.Panels className="mt-6">
-                <Tab.Panel>
-                  <div className=" grid md:grid-cols-2 px-24 gap-10">
-                    <div className=" h-[450px] flex items-center flex-col py-6 border-2 border-black dark:border-white">
-                      <div
-                        style={{ backgroundImage: "url('/images/mask.jpeg');" }}
-                        className="w-3/4 h-3/4 bg-cover"
-                      ></div>
-                      <div className="mt-10 flex justify-center items-center h-12 space-y-2 flex-col">
-                        <h1 className="font-medium text-xl dark:text-white">
-                          Competition: Spot the Mask Challenge
-                        </h1>
-                        <a
-                          href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                          className="uppercase border border-black dark:border-white dark:text-white px-4 py-2 text-md"
-                        >
-                          Read More
-                        </a>
+          {/* main */}
+
+          <div className="min-h-full px-24">
+            <div className="py-6 flex justify-center">
+              <div>
+                <div className="flex flex-col items-center">
+                  <h1 className="font-semibold text-7xl uppercase dark:text-white">
+                    Brian Temu
+                  </h1>
+                  <h1 className="dark:text-white">
+                    Data Science Major & Software Engineer
+                  </h1>
+                </div>
+                <div className="h-12 flex space-x-8 items-center px-12 justify-center dark:text-white">
+                  <GithubICon />
+                  <LinkedInIcon />
+                  <TwitterIcon />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <Tab.Group>
+                <Tab.List className="space-x-8 items-center justify-center flex">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <button
+                        className={
+                          selected
+                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                            : " border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                        }
+                      >
+                        Projects
+                      </button>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <button
+                        className={
+                          selected
+                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                            : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                        }
+                      >
+                        About Me
+                      </button>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <button
+                        className={
+                          selected
+                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                            : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                        }
+                      >
+                        Resume
+                      </button>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <Tab.Panels className="mt-12">
+                  <Tab.Panel>
+                    <div className=" grid md:grid-cols-2 px-24 gap-10">
+                      <div className=" h-[450px] flex items-center flex-col py-6 border-b-4 border-black dark:border-white">
+                        <div
+                          style={{
+                            backgroundImage: "url('/images/mask.jpeg');",
+                          }}
+                          className="w-3/4 h-3/4 bg-cover"
+                        ></div>
+                        <div className="mt-10 flex justify-center items-center h-12 space-y-2 flex-col">
+                          <h1 className="font-medium text-xl dark:text-white">
+                            Competition: Spot the Mask Challenge
+                          </h1>
+                          <a
+                            href="https://github.com/iam-dante/Spot-Mask-Challenge"
+                            className="uppercase border border-black dark:border-white dark:text-white px-4 py-2 text-md"
+                          >
+                            Read More
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Tab.Panel>
+                  </Tab.Panel>
 
-                <Tab.Panel>
-                  <div className="h-screen flex justify-center items-center">
-                    <div className="flex flec-col space-x-2 py-2 px-6 bg-red-200 rounded-md">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        className="w-6 h-6 text-red-700"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
-                        />
-                      </svg>
+                  <Tab.Panel>
+                    <div className="h-screen flex justify-center items-center">
+                      <div className="flex flec-col space-x-2 py-2 px-6 bg-red-200 rounded-md">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6 text-red-700"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                          />
+                        </svg>
 
-                      <h1 className="text-red-700">Page Under Construction</h1>
+                        <h1 className="text-red-700">
+                          Page Under Construction
+                        </h1>
+                      </div>
                     </div>
-                  </div>
-                </Tab.Panel>
-                <Tab.Panel>Content 3</Tab.Panel>
-              </Tab.Panels>
-            </Tab.Group>
+                  </Tab.Panel>
+                  <Tab.Panel>
+                    <div className="flex items-center justify-center pb-12">
+                      <iframe src="/document/Brian_Temu_.pdf" className="w-3/4" height={1200}/>
+                    </div>
+                  </Tab.Panel>
+                </Tab.Panels>
+              </Tab.Group>
+            </div>
           </div>
         </div>
       </div>
