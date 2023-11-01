@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
+import { GithubICon, LinkedInIcon, TwitterIcon } from "../internal/icons";
 import Link from "next/link";
+import { Tab } from "@headlessui/react";
+import { Fragment } from "react";
 
 const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
@@ -12,13 +15,13 @@ const Home = (): JSX.Element => {
         checked={enabled}
         onChange={setEnabled}
         className={`${
-          enabled ? "bg-slate-700" : "bg-sky-600"
+          enabled ? "bg-slate-700" : "bg-white"
         } relative inline-flex h-9 w-16 items-center rounded-full`}
       >
         <span
           className={`${
             enabled ? "translate-x-9" : "translate-x-2"
-          } flex items-center justify-center h-6 w-6 transform rounded-full bg-white transition`}
+          } flex items-center justify-center h-6 w-6 transform rounded-full bg-white dark:bg-black transition`}
         >
           {enabled ? (
             <svg
@@ -27,7 +30,7 @@ const Home = (): JSX.Element => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5"
+              className="w-5 h-5 dark:text-white"
             >
               <path
                 strokeLinecap="round"
@@ -42,7 +45,7 @@ const Home = (): JSX.Element => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-5 h-5"
+              className="w-5 h-5 dark:text-white"
             >
               <path
                 stroke-linecap="round"
@@ -57,223 +60,98 @@ const Home = (): JSX.Element => {
   }
 
   return (
-    <div className={`${enabled ? "" : "dark"}  h-screen `}>
+    <div className={`${enabled ? "" : "dark h-auto"} `}>
       <Head>
         <title>Hellow, Brian Here 👋 </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className="h-screen bg-white dark:bg-zinc-800">
+      <div className="h-screen bg-white dark:bg-black">
         <div className="h-[10%] flex items-center   px-4 md:px-16 justify-end drop-shadow-sm">
-          {/* <h1 className="text-xl font-medium dark:text-white">BG</h1> */}
           <ThemeSwitch />
         </div>
 
-        <div className="hidden h-[90%]  md:block">
-          <div className="h-full grid grid-cols-2 ">
-            <div className="h-full flex flex-col justify-center items-center pl-7 md:pl-40 xl:pl-80">
-              <div className="space-y-4">
-                <h1 className="font-semibold text-6xl text-sky-700 dark:text-sky-500">
-                  Hi, I`m Brian Temu.
-                </h1>
+        {/* main */}
 
-                {/**
-                 * 
-                 * 
-                <p className="text-2xl dark:text-white">
-                    Data Scientist with a software development backgroud located at Maryland Baltimore County.
-                </p>
-
-                 */}
-
-
-                <div className="flex flex-row space-x-6">
-                  <a
-                    href="https://github.com/iam-dante"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <svg
-                      className="h-6 w-6 text-gray-500 hover:text-gray-600"
-                      viewBox="0 0 16 16"
-                      fill="currentcolor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://twitter.com/iambriangasper"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <svg
-                      className="h-6 w-6 text-gray-500 hover:text-blue-500"
-                      viewBox="0 0 17 14"
-                      fill="currentcolor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M5.34616 14C11.7613 14 15.2701 8.61332 15.2701 3.94201C15.2701 3.78901 15.2701 3.6367 15.2599 3.48508C15.9425 2.98467 16.5317 2.36507 17 1.65529C16.3635 1.9413 15.6882 2.12879 14.9967 2.21146C15.7249 1.76973 16.2698 1.07487 16.5301 0.25624C15.8455 0.668035 15.0964 0.958224 14.3154 1.11428C13.7895 0.547548 13.094 0.172275 12.3365 0.0465293C11.579 -0.0792164 10.8017 0.0515763 10.1249 0.418668C9.44811 0.785759 8.90957 1.36868 8.59261 2.07723C8.27564 2.78579 8.19793 3.58046 8.37148 4.33829C6.9848 4.26779 5.62824 3.90255 4.38986 3.26627C3.15148 2.62998 2.05896 1.73689 1.1832 0.644941C0.737183 1.42314 0.600576 2.34438 0.801196 3.22108C1.00181 4.09778 1.52458 4.86402 2.26304 5.3638C1.70796 5.34732 1.16496 5.19555 0.68 4.92134V4.96614C0.68022 5.78229 0.958978 6.57323 1.46899 7.20483C1.97901 7.83642 2.68888 8.26976 3.4782 8.43137C2.96472 8.57333 2.42595 8.59408 1.90332 8.49202C2.12629 9.19436 2.56022 9.80854 3.14446 10.2487C3.7287 10.6888 4.43404 10.9329 5.16188 10.9469C4.43873 11.523 3.6106 11.9489 2.72487 12.2004C1.83914 12.4518 0.913194 12.5237 0 12.4121C1.59505 13.4495 3.45095 13.9998 5.34616 13.9972" />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/brian-gasper-8644541a5"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <svg
-                      className="h-6 w-6 text-gray-500 hover:text-blue-800"
-                      viewBox="0 0 14 14"
-                      fill="currentcolor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M12.9665 0H1.03347C0.759377 0 0.496509 0.108884 0.302695 0.302697C0.108882 0.496511 -1.90735e-06 0.759378 -1.90735e-06 1.03347V12.9665C-1.90735e-06 13.2406 0.108882 13.5035 0.302695 13.6973C0.496509 13.8911 0.759377 14 1.03347 14H12.9665C13.2406 14 13.5035 13.8911 13.6973 13.6973C13.8911 13.5035 14 13.2406 14 12.9665V1.03347C14 0.759378 13.8911 0.496511 13.6973 0.302697C13.5035 0.108884 13.2406 0 12.9665 0ZM4.17278 11.9262H2.06792V5.24028H4.17278V11.9262ZM3.11889 4.31375C2.88013 4.31241 2.64712 4.24036 2.44926 4.10672C2.2514 3.97307 2.09757 3.78381 2.00718 3.56282C1.91678 3.34183 1.89388 3.09901 1.94135 2.86502C1.98882 2.63102 2.10455 2.41633 2.27392 2.24804C2.44329 2.07975 2.65872 1.96541 2.89302 1.91944C3.12732 1.87346 3.36998 1.89793 3.59039 1.98974C3.81079 2.08155 3.99906 2.2366 4.13144 2.43531C4.26381 2.63402 4.33435 2.86749 4.33416 3.10625C4.33642 3.2661 4.30646 3.42477 4.24609 3.5728C4.18571 3.72083 4.09615 3.85519 3.98275 3.96787C3.86934 4.08055 3.73441 4.16925 3.586 4.22867C3.43758 4.28809 3.27872 4.31703 3.11889 4.31375ZM11.9311 11.9321H9.82722V8.27944C9.82722 7.20222 9.3693 6.86972 8.77819 6.86972C8.15403 6.86972 7.54153 7.34028 7.54153 8.30667V11.9321H5.43666V5.24514H7.46083V6.17167H7.48805C7.69125 5.76042 8.40292 5.0575 9.48889 5.0575C10.6633 5.0575 11.9321 5.75458 11.9321 7.79625L11.9311 11.9321Z" />
-                    </svg>
-                  </a>
-                  
-                 {/**
-                  * <a
-                    href="https://open.spotify.com/user/593jjwf8j14pgz0bolmsy5deh?si=16528f148ca341af"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <svg
-                      width="19"
-                      className="h-6 w-6 text-gray-500  hover:text-green-500"
-                      height="19"
-                      viewBox="0 0 48 48"
-                      fill="currentcolor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0 23.9996C0 10.7451 10.7454 0 23.9999 0C37.2549 0 48 10.7451 48 23.9996C48 37.2555 37.2549 48 23.9999 48C10.7454 48 0 37.2555 0 23.9996ZM10.3146 18.5011C17.6998 16.2597 30.4604 16.6821 38.1966 21.2764C39.2607 21.9098 40.6395 21.5581 41.2723 20.4914C41.9045 19.4265 41.5549 18.0488 40.4879 17.4155C31.5819 12.1287 17.4891 11.6318 9.01123 14.2051C7.82446 14.5656 7.15585 15.8189 7.51523 17.0056C7.87433 18.1915 9.12845 18.861 10.3146 18.5011ZM35.3694 28.6973C36.249 29.2381 37.4005 28.9619 37.9433 28.0812C38.4841 27.2025 38.2072 26.0504 37.3277 25.5088C29.9199 20.9563 19.0837 19.6752 10.3671 22.3204C9.37921 22.6214 8.82122 23.6645 9.11927 24.6539C9.41991 25.6417 10.4651 26.1994 11.4544 25.9005C19.0848 23.5843 28.92 24.733 35.3694 28.6973ZM35.0066 34.6163C34.5753 35.3236 33.6545 35.5451 32.9498 35.1141C27.314 31.6696 20.2203 30.8918 11.8662 32.7999C11.0612 32.9844 10.2588 32.48 10.0753 31.6753C9.89077 30.8703 10.3935 30.0678 11.2002 29.8841C20.3424 27.7943 28.1843 28.6936 34.5102 32.5591C35.2155 32.9899 35.4376 33.9113 35.0066 34.6163Z"
-                        fill=""
-                      />
-                    </svg>
-                  </a>
-
-                  * 
-                  */} 
-                  
-                  
-                  <Link href="/projects" className="cursor-pointer">
-                    <svg
-                      className="h-6 w-6 text-gray-500 hover:text-green-500 cursor-pointer"
-                      viewBox="0 0 16 16"
-                      fill="currentcolor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M10.5858 2.58579C11.3668 1.80474 12.6331 1.80474 13.4142 2.58579C14.1952 3.36684 14.1952 4.63316 13.4142 5.41421L10.4142 8.41421C9.63315 9.19526 8.36682 9.19526 7.58577 8.41421C7.19524 8.02369 6.56208 8.02369 6.17156 8.41421C5.78103 8.80474 5.78103 9.4379 6.17156 9.82843C7.73365 11.3905 10.2663 11.3905 11.8284 9.82843L14.8284 6.82843C16.3905 5.26633 16.3905 2.73367 14.8284 1.17157C13.2663 -0.390524 10.7337 -0.390524 9.17156 1.17157L7.67156 2.67157C7.28103 3.0621 7.28103 3.69526 7.67156 4.08579C8.06208 4.47631 8.69524 4.47631 9.08577 4.08579L10.5858 2.58579Z" />
-                      <path d="M5.58579 7.58579C6.36683 6.80474 7.63316 6.80474 8.41421 7.58579C8.80474 7.97631 9.4379 7.97631 9.82843 7.58579C10.219 7.19526 10.219 6.5621 9.82843 6.17157C8.26633 4.60948 5.73367 4.60948 4.17157 6.17157L1.17157 9.17157C-0.390524 10.7337 -0.390524 13.2663 1.17157 14.8284C2.73367 16.3905 5.26633 16.3905 6.82843 14.8284L8.32843 13.3284C8.71895 12.9379 8.71895 12.3047 8.32843 11.9142C7.9379 11.5237 7.30474 11.5237 6.91421 11.9142L5.41421 13.4142C4.63316 14.1953 3.36684 14.1953 2.58579 13.4142C1.80474 12.6332 1.80474 11.3668 2.58579 10.5858L5.58579 7.58579Z" />
-                    </svg>
-                  </Link>
-                </div>
+        <div className="min-h-full px-24">
+          <div className="py-6 flex justify-center">
+            <div>
+              <div className="flex flex-col items-center">
+                <h1 className="font-semibold text-7xl uppercase dark:text-white">Brian Temu</h1>
+                <h1 className="dark:text-white">Data Science Major & Software Engineer</h1>
+              </div>
+              <div className="h-12 flex space-x-8 items-center px-12 justify-center dark:text-white">
+                <GithubICon />
+                <LinkedInIcon />
+                <TwitterIcon />
               </div>
             </div>
-            <div className="h-full justify-center flex items-center">
-              <img src="/images/richard.jpg" className="rounded-md" alt="" />
-            </div>
           </div>
-        </div>
 
-        <div className="md:hidden flex justify-center items-center h-[90%] w-full ">
-          <div className="w-98 h-auto  flex justify-center flex-col items-center w-full space-y-6 px-12">
-            <img
-              src="/images/richard.jpg"
-              className="rounded-full h-40 w-40"
-              alt=""
-            />
-            <h1 className=" text-4xl text-center dark:text-white font-jet">
-              Brian Gasper
-            </h1>
-            <p className="text-center font-jet md:w-3/6 dark:text-white p-6 rounded-xl bg-gray-100 dark:bg-gray-700">
-              `When you base your expectations only on what you see, you become
-              blind to the possibilities of a new reality.`
-            </p>
-            <div className="flex flex-row space-x-6">
-              <a
-                href="https://github.com/iam-dante"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-6 w-6 text-gray-500 hover:text-gray-600"
-                  viewBox="0 0 16 16"
-                  fill="currentcolor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://twitter.com/iambriangasper"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-6 w-6 text-gray-500 hover:text-blue-500"
-                  viewBox="0 0 17 14"
-                  fill="currentcolor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M5.34616 14C11.7613 14 15.2701 8.61332 15.2701 3.94201C15.2701 3.78901 15.2701 3.6367 15.2599 3.48508C15.9425 2.98467 16.5317 2.36507 17 1.65529C16.3635 1.9413 15.6882 2.12879 14.9967 2.21146C15.7249 1.76973 16.2698 1.07487 16.5301 0.25624C15.8455 0.668035 15.0964 0.958224 14.3154 1.11428C13.7895 0.547548 13.094 0.172275 12.3365 0.0465293C11.579 -0.0792164 10.8017 0.0515763 10.1249 0.418668C9.44811 0.785759 8.90957 1.36868 8.59261 2.07723C8.27564 2.78579 8.19793 3.58046 8.37148 4.33829C6.9848 4.26779 5.62824 3.90255 4.38986 3.26627C3.15148 2.62998 2.05896 1.73689 1.1832 0.644941C0.737183 1.42314 0.600576 2.34438 0.801196 3.22108C1.00181 4.09778 1.52458 4.86402 2.26304 5.3638C1.70796 5.34732 1.16496 5.19555 0.68 4.92134V4.96614C0.68022 5.78229 0.958978 6.57323 1.46899 7.20483C1.97901 7.83642 2.68888 8.26976 3.4782 8.43137C2.96472 8.57333 2.42595 8.59408 1.90332 8.49202C2.12629 9.19436 2.56022 9.80854 3.14446 10.2487C3.7287 10.6888 4.43404 10.9329 5.16188 10.9469C4.43873 11.523 3.6106 11.9489 2.72487 12.2004C1.83914 12.4518 0.913194 12.5237 0 12.4121C1.59505 13.4495 3.45095 13.9998 5.34616 13.9972" />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/brian-gasper-8644541a5"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-6 w-6 text-gray-500 hover:text-blue-800"
-                  viewBox="0 0 14 14"
-                  fill="currentcolor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12.9665 0H1.03347C0.759377 0 0.496509 0.108884 0.302695 0.302697C0.108882 0.496511 -1.90735e-06 0.759378 -1.90735e-06 1.03347V12.9665C-1.90735e-06 13.2406 0.108882 13.5035 0.302695 13.6973C0.496509 13.8911 0.759377 14 1.03347 14H12.9665C13.2406 14 13.5035 13.8911 13.6973 13.6973C13.8911 13.5035 14 13.2406 14 12.9665V1.03347C14 0.759378 13.8911 0.496511 13.6973 0.302697C13.5035 0.108884 13.2406 0 12.9665 0ZM4.17278 11.9262H2.06792V5.24028H4.17278V11.9262ZM3.11889 4.31375C2.88013 4.31241 2.64712 4.24036 2.44926 4.10672C2.2514 3.97307 2.09757 3.78381 2.00718 3.56282C1.91678 3.34183 1.89388 3.09901 1.94135 2.86502C1.98882 2.63102 2.10455 2.41633 2.27392 2.24804C2.44329 2.07975 2.65872 1.96541 2.89302 1.91944C3.12732 1.87346 3.36998 1.89793 3.59039 1.98974C3.81079 2.08155 3.99906 2.2366 4.13144 2.43531C4.26381 2.63402 4.33435 2.86749 4.33416 3.10625C4.33642 3.2661 4.30646 3.42477 4.24609 3.5728C4.18571 3.72083 4.09615 3.85519 3.98275 3.96787C3.86934 4.08055 3.73441 4.16925 3.586 4.22867C3.43758 4.28809 3.27872 4.31703 3.11889 4.31375ZM11.9311 11.9321H9.82722V8.27944C9.82722 7.20222 9.3693 6.86972 8.77819 6.86972C8.15403 6.86972 7.54153 7.34028 7.54153 8.30667V11.9321H5.43666V5.24514H7.46083V6.17167H7.48805C7.69125 5.76042 8.40292 5.0575 9.48889 5.0575C10.6633 5.0575 11.9321 5.75458 11.9321 7.79625L11.9311 11.9321Z" />
-                </svg>
-              </a>
-              <a
-                href="https://open.spotify.com/user/593jjwf8j14pgz0bolmsy5deh?si=16528f148ca341af"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  width="19"
-                  className="h-6 w-6 text-gray-500  hover:text-green-500"
-                  height="19"
-                  viewBox="0 0 48 48"
-                  fill="currentcolor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0 23.9996C0 10.7451 10.7454 0 23.9999 0C37.2549 0 48 10.7451 48 23.9996C48 37.2555 37.2549 48 23.9999 48C10.7454 48 0 37.2555 0 23.9996ZM10.3146 18.5011C17.6998 16.2597 30.4604 16.6821 38.1966 21.2764C39.2607 21.9098 40.6395 21.5581 41.2723 20.4914C41.9045 19.4265 41.5549 18.0488 40.4879 17.4155C31.5819 12.1287 17.4891 11.6318 9.01123 14.2051C7.82446 14.5656 7.15585 15.8189 7.51523 17.0056C7.87433 18.1915 9.12845 18.861 10.3146 18.5011ZM35.3694 28.6973C36.249 29.2381 37.4005 28.9619 37.9433 28.0812C38.4841 27.2025 38.2072 26.0504 37.3277 25.5088C29.9199 20.9563 19.0837 19.6752 10.3671 22.3204C9.37921 22.6214 8.82122 23.6645 9.11927 24.6539C9.41991 25.6417 10.4651 26.1994 11.4544 25.9005C19.0848 23.5843 28.92 24.733 35.3694 28.6973ZM35.0066 34.6163C34.5753 35.3236 33.6545 35.5451 32.9498 35.1141C27.314 31.6696 20.2203 30.8918 11.8662 32.7999C11.0612 32.9844 10.2588 32.48 10.0753 31.6753C9.89077 30.8703 10.3935 30.0678 11.2002 29.8841C20.3424 27.7943 28.1843 28.6936 34.5102 32.5591C35.2155 32.9899 35.4376 33.9113 35.0066 34.6163Z"
-                    fill=""
-                  />
-                </svg>
-              </a>
-              <svg
-                className="h-6 w-6 text-gray-500 hover:text-green-500"
-                viewBox="0 0 16 16"
-                fill="currentcolor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M10.5858 2.58579C11.3668 1.80474 12.6331 1.80474 13.4142 2.58579C14.1952 3.36684 14.1952 4.63316 13.4142 5.41421L10.4142 8.41421C9.63315 9.19526 8.36682 9.19526 7.58577 8.41421C7.19524 8.02369 6.56208 8.02369 6.17156 8.41421C5.78103 8.80474 5.78103 9.4379 6.17156 9.82843C7.73365 11.3905 10.2663 11.3905 11.8284 9.82843L14.8284 6.82843C16.3905 5.26633 16.3905 2.73367 14.8284 1.17157C13.2663 -0.390524 10.7337 -0.390524 9.17156 1.17157L7.67156 2.67157C7.28103 3.0621 7.28103 3.69526 7.67156 4.08579C8.06208 4.47631 8.69524 4.47631 9.08577 4.08579L10.5858 2.58579Z" />
-                <path d="M5.58579 7.58579C6.36683 6.80474 7.63316 6.80474 8.41421 7.58579C8.80474 7.97631 9.4379 7.97631 9.82843 7.58579C10.219 7.19526 10.219 6.5621 9.82843 6.17157C8.26633 4.60948 5.73367 4.60948 4.17157 6.17157L1.17157 9.17157C-0.390524 10.7337 -0.390524 13.2663 1.17157 14.8284C2.73367 16.3905 5.26633 16.3905 6.82843 14.8284L8.32843 13.3284C8.71895 12.9379 8.71895 12.3047 8.32843 11.9142C7.9379 11.5237 7.30474 11.5237 6.91421 11.9142L5.41421 13.4142C4.63316 14.1953 3.36684 14.1953 2.58579 13.4142C1.80474 12.6332 1.80474 11.3668 2.58579 10.5858L5.58579 7.58579Z" />
-              </svg>
-            </div>
+          <div className="mt-6">
+            <Tab.Group>
+              <Tab.List className="space-x-8 items-center justify-center flex">
+                <Tab as={Fragment}>
+                  {({ selected }) => (
+                    <button
+                      className={
+                        selected
+                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                          : " border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                      }
+                    >
+                      Projects
+                    </button>
+                  )}
+                </Tab>
+                <Tab as={Fragment}>
+                  {({ selected }) => (
+                    <button
+                      className={
+                        selected
+                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                          : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                      }
+                    >
+                      About Me
+                    </button>
+                  )}
+                </Tab>
+                <Tab as={Fragment}>
+                  {({ selected }) => (
+                    <button
+                      className={
+                        selected
+                          ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
+                          : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                      }
+                    >
+                      Resume
+                    </button>
+                  )}
+                </Tab>
+              </Tab.List>
+              <Tab.Panels className="mt-6">
+                <Tab.Panel>
+                  <div className=" grid md:grid-cols-2 px-24 gap-10">
+                    <div className=" h-[450px] flex items-center flex-col py-6 border-2 border-black dark:border-white">
+                      <div
+                        style={{ backgroundImage: "url('/images/mask.jpeg');" }}
+                        className="w-3/4 h-3/4 bg-cover"
+                      ></div>
+                      <div className="mt-10 flex justify-center items-center h-12 space-y-2 flex-col">
+                        <h1 className="font-medium text-xl dark:text-white">Competition: Spot the Mask Challenge</h1>
+                        <a href="https://github.com/iam-dante/Spot-Mask-Challenge" className="uppercase border border-black dark:border-white dark:text-white px-4 py-2 text-md">Read More</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </Tab.Panel>
+
+                <Tab.Panel>Content 2</Tab.Panel>
+                <Tab.Panel>Content 3</Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
           </div>
         </div>
       </div>

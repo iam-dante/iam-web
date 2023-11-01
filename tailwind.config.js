@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
+      //sans: ["Poppins", "sans-serif"],
+      sans: ["DM Sans", "sans-serif"],
       jet: ["JetBrains Mono", "sans-serif"],
     },
     extend: {},
