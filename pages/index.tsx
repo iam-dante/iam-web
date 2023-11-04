@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { useState } from "react";
-import { Switch } from "@headlessui/react";
-import { GithubICon, LinkedInIcon, TwitterIcon } from "../internal/icons";
-import Link from "next/link";
-import { Tab } from "@headlessui/react";
-import { Fragment } from "react";
 import Image from "next/image";
 
+import { useState } from "react";
+import { Switch } from "@headlessui/react";
+import { Tab } from "@headlessui/react";
+import { Fragment } from "react";
+
+import { GithubICon, LinkedInIcon, TwitterIcon } from "../internal/icons";
 const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
   function ThemeSwitch() {
@@ -76,7 +76,7 @@ const Home = (): JSX.Element => {
             <ThemeSwitch />
           </div>
 
-          {/* main */}
+          {/* main body*/}
 
           <div className="min-h-full px-24 dark:bg-black">
             <div className="py-6 flex justify-center">
