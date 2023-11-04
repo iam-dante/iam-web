@@ -5,6 +5,7 @@ import { GithubICon, LinkedInIcon, TwitterIcon } from "../internal/icons";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
+import Image from "next/image";
 
 const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
@@ -60,8 +61,8 @@ const Home = (): JSX.Element => {
   }
 
   return (
-    <div className={`${enabled ? "" : "dark"} `}>
-      <div className="dark:bg-black h-auto">
+    <div className={` ${enabled ? "" : "dark"} `}>
+      <div className="h-auto">
         <Head>
           <title>Hellow, Brian Here 👋 </title>
           <meta
@@ -70,14 +71,14 @@ const Home = (): JSX.Element => {
           />
         </Head>
 
-        <div className="h-screen bg-white dark:bg-black">
-          <div className="h-[10%] flex items-center   px-4 md:px-16 justify-end drop-shadow-sm">
+        <div className="h-screen  ">
+          <div className="h-[10%] flex items-center dark:bg-black   px-4 md:px-16 justify-end drop-shadow-sm">
             <ThemeSwitch />
           </div>
 
           {/* main */}
 
-          <div className="min-h-full px-24">
+          <div className="min-h-full px-24 dark:bg-black">
             <div className="py-6 flex justify-center">
               <div>
                 <div className="flex flex-col items-center">
@@ -139,9 +140,9 @@ const Home = (): JSX.Element => {
                     )}
                   </Tab>
                 </Tab.List>
-                <Tab.Panels className="mt-12">
+                <Tab.Panels className="py-12">
                   <Tab.Panel>
-                    <div className=" grid md:grid-cols-2 px-24 gap-10">
+                    <div className=" grid grid-cols-2 px-24 gap-10">
                       <div className=" h-[450px] flex items-center flex-col py-6 border-b-4 border-black dark:border-white">
                         <div
                           style={{
@@ -149,6 +150,11 @@ const Home = (): JSX.Element => {
                           }}
                           className="w-3/4 h-3/4 bg-cover"
                         ></div>
+
+                          <div>
+
+                        <Image src="/images/mask.jpeg" height={300} width={500} alt="Mask Image"/>
+                          </div>
                         <div className="mt-10 flex justify-center items-center h-12 space-y-2 flex-col">
                           <h1 className="font-medium text-xl dark:text-white">
                             Competition: Spot the Mask Challenge
@@ -161,6 +167,7 @@ const Home = (): JSX.Element => {
                           </a>
                         </div>
                       </div>
+
                     </div>
                   </Tab.Panel>
 
@@ -188,6 +195,7 @@ const Home = (): JSX.Element => {
                       </div>
                     </div>
                   </Tab.Panel>
+
                   <Tab.Panel>
                     <div className="flex items-center justify-center pb-12">
                       <iframe src="/document/Brian_Temu_.pdf" className="w-3/4" height={1200}/>
