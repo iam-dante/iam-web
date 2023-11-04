@@ -168,7 +168,7 @@ const Home = (): JSX.Element => {
                         </div>
                       </div>
 
-                      <div className=" h-[450px] flex items-center flex-col py-6 border-b-4 border-black dark:border-white">
+                      {/* <div className=" h-[450px] flex items-center flex-col py-6 border-b-4 border-black dark:border-white">
                         <div
                           style={{
                             backgroundImage: "url('/images/mask.jpeg');",
@@ -191,7 +191,7 @@ const Home = (): JSX.Element => {
                             Read More
                           </a>
                         </div>
-                      </div>
+                      </div> */}
 
                     </div>
                   </Tab.Panel>
