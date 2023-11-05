@@ -168,30 +168,7 @@ const Home = (): JSX.Element => {
                         </div>
                       </div>
 
-                      <div className=" h-[450px] flex items-center flex-col py-6 border-b-4 border-black dark:border-white">
-                        <div
-                          style={{
-                            backgroundImage: "url('/images/mask.jpeg');",
-                          }}
-                          className="w-3/4 h-3/4 bg-cover"
-                        ></div>
-
-                          <div>
-
-                        <Image src="/images/mask.jpeg" height={300} width={500} alt="Mask Image"/>
-                          </div>
-                        <div className="mt-10 flex justify-center items-center h-12 space-y-2 flex-col">
-                          <h1 className="font-medium text-xl dark:text-white">
-                            Competition: Spot the Mask Challenge
-                          </h1>
-                          <a
-                            href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                            className="uppercase border border-black dark:border-white dark:text-white px-4 py-2 text-md"
-                          >
-                            Read More
-                          </a>
-                        </div>
-                      </div>
+                    
 
                     </div>
                   </Tab.Panel>
