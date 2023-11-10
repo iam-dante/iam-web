@@ -144,141 +144,147 @@ const Home = (): JSX.Element => {
                 <Tab.Panels className="py-12">
                   <Tab.Panel>
                     <div className="grid  md:grid-cols-2 xl:grid-cols-3 xl:px-60 gap-10">
-
-
-                      <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white min-h-0">
-                        <div className="h-40 bg-red-600"></div>
-                        <div className="py-2 px-6 space-y-3">
-                          <h1 className="font-bold text-2xl dark:text-white">
-                            Spot the Mask Challenge
-                          </h1>
-                          <div className="flex">
+                      <div>
+                        <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white min-h-0">
+                          <div className="h-40 bg-red-600"></div>
+                          <div className="py-2 px-6 space-y-3">
+                            <h1 className="font-bold text-2xl dark:text-white">
+                              Spot the Mask Challenge
+                            </h1>
+                            <div className="flex">
+                              <a
+                                href="https://github.com/iam-dante/Spot-Mask-Challenge"
+                                className="text-sm bg-red-200 text-red-600 font-semibold px-3  rounded-full"
+                              >
+                                Deep Learning
+                              </a>
+                            </div>
+                            <p className="text-black dark:text-white">
+                              The Spot the Mask Project is an exciting
+                              competition-based initiative that harnesses the
+                              power of machine learning to classify images
+                              exclusively sourced from{" "}
+                              <a
+                                href="https://zindi.africa/competitions/spot-the-mask"
+                                className="underline text-red-600"
+                              >
+                                Zindi
+                              </a>
+                              . In this competition, participants are tasked
+                              with creating and fine-tuning image classification
+                              models to discern whether individuals in these
+                              images are wearing masks. It represents a
+                              significant and innovative challenge within the
+                              machine learning community.
+                            </p>
+                          </div>
+                          <div className="flex p-4 justify-end">
                             <a
+                              target="blank"
                               href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                              className="text-sm bg-red-200 text-red-600 font-semibold px-3  rounded-full"
+                              className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
                             >
-                              Deep Learning
+                              Read More
                             </a>
                           </div>
-                          <p className="text-black dark:text-white">
-                            The Spot the Mask Project is an exciting
-                            competition-based initiative that harnesses the
-                            power of machine learning to classify images
-                            exclusively sourced from{" "}
-                            <a
-                              href="https://zindi.africa/competitions/spot-the-mask"
-                              className="underline text-red-600"
-                            >
-                              Zindi
-                            </a>
-                            . In this competition, participants are tasked with
-                            creating and fine-tuning image classification models
-                            to discern whether individuals in these images are
-                            wearing masks. It represents a significant and
-                            innovative challenge within the machine learning
-                            community.
-                          </p>
-                        </div>
-                        <div className="flex p-4 justify-end">
-                          <a
-                            target="blank"
-                            href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                            className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
-                          >
-                            Read More
-                          </a>
                         </div>
                       </div>
 
-                      <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white">
-                        <div className="h-40 bg-sky-600"></div>
-                        <div className="py-2 px-6 space-y-3">
-                          <h1 className="font-bold text-2xl dark:text-white">
-                            Baltimore Police Department Crime
-                          </h1>
-                          <div className="flex">
+                      <div>
+                        <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white">
+                          <div className="h-40 bg-sky-600"></div>
+                          <div className="py-2 px-6 space-y-3">
+                            <h1 className="font-bold text-2xl dark:text-white">
+                              Baltimore Police Department Crime
+                            </h1>
+                            <div className="flex">
+                              <a
+                                href="https://github.com/iam-dante/Spot-Mask-Challenge"
+                                className="text-sm bg-sky-200 text-sky-600 font-semibold px-3  rounded-full"
+                              >
+                                Data Analysis
+                              </a>
+                            </div>
+                            <p className="text-black dark:text-white">
+                              <a
+                                href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data/explore"
+                                className="underline text-sky-700"
+                              >
+                                Open Baltimore Crime Data
+                              </a>{" "}
+                              Open Baltimore Crime Data Analysis is a
+                              data-driven project focused on exploring and
+                              interpreting crime data from the city of
+                              Baltimore. By leveraging various analytical
+                              techniques, this initiative aims to uncover
+                              trends, patterns, and insights within the dataset,
+                              providing valuable information to local
+                              authorities and communities. Through rigorous
+                              analysis, it seeks to enhance understanding of
+                              crime dynamics, contribute to informed
+                              decision-making, and ultimately promote safer and
+                              more secure neighborhoods in Baltimore.
+                            </p>
+                          </div>
+                          <div className="flex p-4 justify-end">
                             <a
-                              href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                              className="text-sm bg-sky-200 text-sky-600 font-semibold px-3  rounded-full"
+                              target="blank"
+                              href="https://github.com/iam-dante/Open-Baltimore-Analysis"
+                              className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
                             >
-                              Data Analysis
+                              Read More
                             </a>
                           </div>
-                          <p className="text-black dark:text-white">
-                            <a
-                              href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data/explore"
-                              className="underline text-sky-700"
-                            >
-                              Open Baltimore Crime Data
-                            </a>{" "}
-                            Open Baltimore Crime Data Analysis is a data-driven
-                            project focused on exploring and interpreting crime
-                            data from the city of Baltimore. By leveraging
-                            various analytical techniques, this initiative aims
-                            to uncover trends, patterns, and insights within the
-                            dataset, providing valuable information to local
-                            authorities and communities. Through rigorous
-                            analysis, it seeks to enhance understanding of crime
-                            dynamics, contribute to informed decision-making,
-                            and ultimately promote safer and more secure
-                            neighborhoods in Baltimore.
-                          </p>
-                        </div>
-                        <div className="flex p-4 justify-end">
-                          <a
-                            target="blank"
-                            href="https://github.com/iam-dante/Open-Baltimore-Analysis"
-                            className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
-                          >
-                            Read More
-                          </a>
                         </div>
                       </div>
 
-                      <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white">
-                        <div className="h-40 bg-orange-600"></div>
-                        <div className="py-2 px-6 space-y-3">
-                          <h1 className="font-bold text-2xl dark:text-white">
-                            Real Time Facemask Detection System
-                          </h1>
-                          <div className="flex">
+                      <div>
+                        <div className="border-2 border-black rounded-md hover:shadow-lg dark:border-white">
+                          <div className="h-40 bg-orange-600"></div>
+                          <div className="py-2 px-6 space-y-3">
+                            <h1 className="font-bold text-2xl dark:text-white">
+                              Real Time Facemask Detection System
+                            </h1>
+                            <div className="flex">
+                              <a
+                                href="https://github.com/iam-dante/Spot-Mask-Challenge"
+                                className="text-sm bg-orange-200 text-orange-600 font-semibold px-3  rounded-full"
+                              >
+                                Computer Vision
+                              </a>
+                            </div>
+                            <p className="text-black dark:text-white">
+                              The YOLO Real Face Mask Detection System is an
+                              advanced computer vision application that utilizes
+                              the{" "}
+                              <a
+                                href="https://pjreddie.com/darknet/yolo/"
+                                className="underline text-orange-700"
+                              >
+                                YOLO (You Only Look Once)
+                              </a>{" "}
+                              object detection algorithm to identify and
+                              categorize whether individuals in images or video
+                              streams are wearing face masks accurately and in
+                              real-time. This system plays a crucial role in
+                              monitoring and enforcing mask-wearing compliance,
+                              especially during health crises such as the
+                              COVID-19 pandemic. It provides rapid and reliable
+                              detection of individuals wearing masks and those
+                              who are not, contributing to public health and
+                              safety efforts by minimizing the spread of
+                              infectious diseases.
+                            </p>
+                          </div>
+                          <div className="flex p-4 justify-end">
                             <a
-                              href="https://github.com/iam-dante/Spot-Mask-Challenge"
-                              className="text-sm bg-orange-200 text-orange-600 font-semibold px-3  rounded-full"
+                              target="blank"
+                              href="https://github.com/iam-dante/YoloV5-Facemask-Detection"
+                              className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
                             >
-                              Computer Vision
+                              Read More
                             </a>
                           </div>
-                          <p className="text-black dark:text-white">
-                            The YOLO Real Face Mask Detection System is an
-                            advanced computer vision application that utilizes
-                            the{" "}
-                            <a
-                              href="https://pjreddie.com/darknet/yolo/"
-                              className="underline text-orange-700"
-                            >
-                              YOLO (You Only Look Once)
-                            </a>{" "}
-                            object detection algorithm to identify and
-                            categorize whether individuals in images or video
-                            streams are wearing face masks accurately and in
-                            real-time. This system plays a crucial role in
-                            monitoring and enforcing mask-wearing compliance,
-                            especially during health crises such as the COVID-19
-                            pandemic. It provides rapid and reliable detection
-                            of individuals wearing masks and those who are not,
-                            contributing to public health and safety efforts by
-                            minimizing the spread of infectious diseases.
-                          </p>
-                        </div>
-                        <div className="flex p-4 justify-end">
-                          <a
-                            target="blank"
-                            href="https://github.com/iam-dante/YoloV5-Facemask-Detection"
-                            className="uppercase border-2 border-black dark:border-white dark:text-white px-2  rounded-full"
-                          >
-                            Read More
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -316,7 +322,6 @@ const Home = (): JSX.Element => {
                       <iframe
                         src="/document/Brian_Temu_.pdf"
                         className=" w-5/6 xl:w-3/4 h-screen xl:h-[1160px]"
-                        
                       />
                     </div>
                   </Tab.Panel>
