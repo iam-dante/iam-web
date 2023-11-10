@@ -100,17 +100,17 @@ const Home = (): JSX.Element => {
 
             <div className="mt-6">
               <Tab.Group>
-                <Tab.List className="xl:space-x-8 items-center justify-center flex">
+                <Tab.List className=" space-x-4 xl:space-x-8 items-center justify-center flex">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <button
                         className={
                           selected
-                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                            : " border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                            ? "bg-black text-white px-4 md:px-8 py-4 dark:text-black dark:bg-white"
+                            : " border-b-2 border-black text-black px-4  md:px-8 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        <h1>Projects</h1>
+                        <h1 className="text-sm text md:text-base">Projects</h1>
                       </button>
                     )}
                   </Tab>
@@ -119,11 +119,11 @@ const Home = (): JSX.Element => {
                       <button
                         className={
                           selected
-                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                            : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                            ? "bg-black text-white px-4 md:px-8 py-4 dark:text-black dark:bg-white"
+                            : "border-b-2 border-black text-black px-4 md:px-8 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        <h1 className="text-sm text md:text-md">About Me</h1>
+                        <h1 className="text-sm text md:text-base">About Me</h1>
                       </button>
                     )}
                   </Tab>
@@ -132,11 +132,11 @@ const Home = (): JSX.Element => {
                       <button
                         className={
                           selected
-                            ? "bg-black text-white px-8 py-4 dark:text-black dark:bg-white"
-                            : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
+                            ? "bg-black text-white px-4 py-4 dark:text-black dark:bg-white"
+                            : "border-b-2 border-black text-black px-4 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        <h1>Resume</h1>
+                        <h1 className="text-sm text md:text-base">Resume</h1>
                       </button>
                     )}
                   </Tab>
@@ -285,15 +285,38 @@ const Home = (): JSX.Element => {
                   </Tab.Panel>
 
                   <Tab.Panel>
-                    <Projects/>
+                    {/* <Projects/> */}
+
+                    <div className="h-screen flex justify-center items-center">
+                      <div className="flex flec-col space-x-2 py-2 px-6 bg-red-200 rounded-md">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6 text-red-700"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                          />
+                        </svg>
+
+                        <h1 className="text-red-700">
+                          Page Under Construction
+                        </h1>
+                      </div>
+                    </div>
                   </Tab.Panel>
 
                   <Tab.Panel>
                     <div className="flex items-center justify-center pb-12">
                       <iframe
                         src="/document/Brian_Temu_.pdf"
-                        className="w-3/4"
-                        height={1200}
+                        className=" w-5/6 xl:w-3/4 h-screen xl:h-[1160px]"
+                        
                       />
                     </div>
                   </Tab.Panel>
