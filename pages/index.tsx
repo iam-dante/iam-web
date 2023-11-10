@@ -7,6 +7,7 @@ import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 
 import { GithubICon, LinkedInIcon, TwitterIcon } from "../internal/icons";
+import Projects from "./projects";
 const Home = (): JSX.Element => {
   const [enabled, setEnabled] = useState(true);
   function ThemeSwitch() {
@@ -78,11 +79,11 @@ const Home = (): JSX.Element => {
 
           {/* main body*/}
 
-          <div className="min-h-full px-24 dark:bg-black">
+          <div className="min-h-full px-6 xl:px-24 dark:bg-black">
             <div className="py-6 flex justify-center">
               <div>
                 <div className="flex flex-col items-center">
-                  <h1 className="font-semibold text-7xl uppercase dark:text-white">
+                  <h1 className="font-semibold text-3xl xl:text-7xl uppercase dark:text-white">
                     Brian Temu
                   </h1>
                   <h1 className="dark:text-white">
@@ -99,7 +100,7 @@ const Home = (): JSX.Element => {
 
             <div className="mt-6">
               <Tab.Group>
-                <Tab.List className="space-x-8 items-center justify-center flex">
+                <Tab.List className="xl:space-x-8 items-center justify-center flex">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <button
@@ -109,7 +110,7 @@ const Home = (): JSX.Element => {
                             : " border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        Projects
+                        <h1>Projects</h1>
                       </button>
                     )}
                   </Tab>
@@ -122,7 +123,7 @@ const Home = (): JSX.Element => {
                             : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        About Me
+                        <h1 className="text-sm text md:text-md">About Me</h1>
                       </button>
                     )}
                   </Tab>
@@ -135,7 +136,7 @@ const Home = (): JSX.Element => {
                             : "border-b-2 border-black text-black px-8 py-4 dark:text-white dark:border-white"
                         }
                       >
-                        Resume
+                        <h1>Resume</h1>
                       </button>
                     )}
                   </Tab>
@@ -284,28 +285,7 @@ const Home = (): JSX.Element => {
                   </Tab.Panel>
 
                   <Tab.Panel>
-                    <div className="h-screen flex justify-center items-center">
-                      <div className="flex flec-col space-x-2 py-2 px-6 bg-red-200 rounded-md">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          className="w-6 h-6 text-red-700"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
-                          />
-                        </svg>
-
-                        <h1 className="text-red-700">
-                          Page Under Construction
-                        </h1>
-                      </div>
-                    </div>
+                    <Projects/>
                   </Tab.Panel>
 
                   <Tab.Panel>
