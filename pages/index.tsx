@@ -70,6 +70,10 @@ const Home = (): JSX.Element => {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta
+            name="description"
+            content="Author: Brian Temu, Personal Website"
+          ></meta>
         </Head>
 
         <div className="h-screen  ">
