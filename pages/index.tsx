@@ -324,7 +324,7 @@ const Home = (): JSX.Element => {
                   <Tab.Panel>
                     <div className="flex items-center justify-center pb-12">
                       <iframe
-                        src="/document/Brian_Temu_.pdf"
+                        src="/document/Brian Temu's - Resume.pdf"
                         className=" w-5/6 xl:w-3/4 h-screen xl:h-[1160px]"
                       />
                     </div>
