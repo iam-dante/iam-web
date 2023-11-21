@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Analytics } from '@vercel/analytics/react';
 
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
@@ -335,6 +336,7 @@ const Home = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 };
